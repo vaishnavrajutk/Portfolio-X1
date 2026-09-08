@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Languages",
+    "items": ["Go", "JavaScript", "TypeScript", "Python"]
+  },
+  {
+    "category": "Frontend",
+    "items": ["React", "Tailwind CSS", "Vite"]
+  },
+  {
+    "category": "Backend",
+    "items": ["Go net/http", "REST APIs", "PostgreSQL"]
+  },
+  {
+    "category": "Tools",
+    "items": ["Git", "Docker", "Linux"]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "portfolio-x1",
+    "name": "Portfolio X1",
+    "description": "This portfolio site itself — a React frontend backed by a Go API.",
+    "tags": ["Go", "React", "Tailwind"],
+    "repoUrl": "",
+    "liveUrl": "",
+    "featured": true
+  }
+]
