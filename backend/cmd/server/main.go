@@ -13,6 +13,7 @@ import (
 	"portfolio-backend/internal/handlers"
 	"portfolio-backend/internal/mailer"
 	"portfolio-backend/internal/middleware"
+	"portfolio-backend/internal/web"
 )
 
 func main() {
@@ -42,6 +43,8 @@ func main() {
 
 	contactLimiter := middleware.RateLimit(cfg.RateLimitPerMin, time.Minute)
 	mux.Handle("POST /api/contact", contactLimiter(http.HandlerFunc(h.Contact)))
+
+	mux.Handle("/", http.FileServerFS(web.StaticFS()))
 
 	handler := middleware.Chain(mux, middleware.Logging, middleware.CORS(cfg.AllowedOrigins))
 

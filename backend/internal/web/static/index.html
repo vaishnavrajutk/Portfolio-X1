@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnav Raju — Software Engineer</title>
+  <meta name="description" content="Portfolio of Vaishnav Raju — software engineer building on Go and React." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand"><span class="glow">Vaishnav</span>Raju</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner reveal">
+        <div class="avatar" aria-hidden="true">VR</div>
+        <h1>Hi, I'm <span class="glow">Vaishnav Raju</span></h1>
+        <p class="tagline">Software engineer who builds fast, clean products — end to end, from Go APIs to React frontends.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-inner reveal">
+        <h2 class="section-title">What I do</h2>
+        <p class="section-text">
+          I'm a full-stack developer focused on building reliable backend systems and
+          polished, interactive frontends. I enjoy working across the stack — designing
+          APIs in Go, building UI in React, and shipping things that feel fast and solid.
+          Always looking for interesting problems to solve.
+        </p>
+        <ul class="skill-tags">
+          <li>Go</li>
+          <li>JavaScript / TypeScript</li>
+          <li>React</li>
+          <li>REST APIs</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="section-inner reveal">
+        <h2 class="section-title">Where I've worked</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Software Engineer — Nimbus Systems</h3>
+              <span class="timeline-date">2024 — Present</span>
+              <p>Building backend services in Go for an internal analytics platform, plus the React dashboard that consumes them.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Junior Developer — Brightloop Labs</h3>
+              <span class="timeline-date">2022 — 2024</span>
+              <p>Worked across the stack on a customer-facing web app, shipping features from database schema to UI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-inner reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-thumb" aria-hidden="true">TF</div>
+            <h3>TaskFlow</h3>
+            <p>A lightweight task-management API written in Go, with JWT auth, Postgres storage, and a rate-limited public webhook endpoint.</p>
+            <div class="project-tags">
+              <span>Go</span><span>PostgreSQL</span><span>REST</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link">Live demo</a>
+              <a href="#" class="link">Source</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-thumb" aria-hidden="true">SS</div>
+            <h3>SnapShare</h3>
+            <p>A React photo-sharing app with drag-and-drop uploads, optimistic UI updates, and a masonry gallery layout.</p>
+            <div class="project-tags">
+              <span>React</span><span>Tailwind</span><span>Vite</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link">Live demo</a>
+              <a href="#" class="link">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="section-inner reveal">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-text">Have a project in mind or just want to say hi? My inbox is open.</p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required maxlength="200" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="200" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required maxlength="5000"></textarea>
+
+            <button type="submit" class="btn btn-primary" id="contact-submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="social-links">
+            <a href="mailto:vaishnavr.mec@gmail.com" class="social-link">
+              <span class="social-icon">✉</span> vaishnavr.mec@gmail.com
+            </a>
+            <a href="https://github.com/vaishnavraju" class="social-link" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">⌥</span> github.com/vaishnavraju
+            </a>
+            <a href="https://linkedin.com/in/vaishnavraju" class="social-link" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">in</span> linkedin.com/in/vaishnavraju
+            </a>
+            <a href="https://x.com/vaishnavraju" class="social-link" target="_blank" rel="noopener noreferrer">
+              <span class="social-icon">𝕏</span> x.com/vaishnavraju
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Vaishnav Raju. Built with Go + plain HTML/CSS.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

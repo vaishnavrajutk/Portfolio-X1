@@ -1,7 +1,9 @@
-# Portfolio backend
+# Portfolio site
 
-Go API serving portfolio content and handling the contact form. Stdlib only —
-no external dependencies to fetch.
+A single Go binary that serves the whole site: the static HTML/CSS/JS
+frontend (embedded via `go:embed` from `internal/web/static/`) and a JSON
+API for content + the contact form. Stdlib only — no external dependencies
+to fetch, no separate frontend build step.
 
 ## Run locally
 
@@ -13,7 +15,10 @@ cp .env.example .env
 go run ./cmd/server
 ```
 
-Server listens on `:8080` by default (`PORT` in `.env`).
+Then open `http://localhost:8080` in a browser. Server listens on `:8080`
+by default (`PORT` in `.env`).
+
+See [DEPLOY.md](./DEPLOY.md) for how to put this on vaishnav.com.
 
 ## Endpoints
 
@@ -31,6 +36,10 @@ Server listens on `:8080` by default (`PORT` in `.env`).
 `/api/profile`, `/api/skills`, `/api/projects`, and `/api/experience` are
 served straight from the JSON files in `internal/data/`. Edit those files
 with your real info and rebuild — no code changes needed.
+
+The frontend itself (name, photo, project cards, experience timeline, social
+links) is plain HTML in `internal/web/static/index.html` — it currently has
+placeholder/fake content, edit it directly and rebuild.
 
 ## Config (env vars)
 
