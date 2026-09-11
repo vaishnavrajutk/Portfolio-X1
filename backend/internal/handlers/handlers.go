@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"log"
 	"net/http"
 	"net/mail"
 	"strings"
@@ -74,6 +75,7 @@ func (h *Handler) Contact(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := h.mailer.Send(req.Name, req.Email, req.Message); err != nil {
+		log.Printf("contact: failed to send message: %v", err)
 		writeJSON(w, http.StatusBadGateway, map[string]string{"error": "failed to send message"})
 		return
 	}
