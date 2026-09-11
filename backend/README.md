@@ -18,7 +18,7 @@ go run ./cmd/server
 Then open `http://localhost:8080` in a browser. Server listens on `:8080`
 by default (`PORT` in `.env`).
 
-See [DEPLOY.md](./DEPLOY.md) for how to put this on vaishnav.com.
+See [DEPLOY.md](./DEPLOY.md) for how to put this on vaishnavraju.com.
 
 ## Endpoints
 

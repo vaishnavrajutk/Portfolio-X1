@@ -1,4 +1,4 @@
-# Deploying to vaishnav.com
+# Deploying to vaishnavraju.com
 
 The whole site — HTML/CSS/JS frontend and the Go API — is compiled into a
 single binary (the frontend is embedded via `go:embed`). That means
@@ -40,7 +40,7 @@ In the service's **Environment** tab, add:
 
 | Key | Value |
 |---|---|
-| `ALLOWED_ORIGINS` | `https://vaishnav.com,https://www.vaishnav.com` |
+| `ALLOWED_ORIGINS` | `https://vaishnavraju.com,https://www.vaishnavraju.com` |
 | `CONTACT_TO` | your real email, if you want the contact form to send you mail |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USERNAME` / `SMTP_PASSWORD` | your SMTP provider's creds, if sending real email |
 
@@ -52,14 +52,14 @@ Don't set `PORT` — Render injects its own and our server already reads
 Click **Create Web Service**. Render builds and gives you a URL like
 `portfolio-x1.onrender.com` — check that it loads before moving on.
 
-### 4. Point vaishnav.com at it
+### 4. Point vaishnavraju.com at it
 
-1. In the Render service, go to **Settings → Custom Domains → Add Custom Domain**, enter `vaishnav.com` (and again for `www.vaishnav.com`).
+1. In the Render service, go to **Settings → Custom Domains → Add Custom Domain**, enter `vaishnavraju.com` (and again for `www.vaishnavraju.com`).
 2. Render shows you the exact DNS records to add (typically an `A`/`ALIAS`/`ANAME` record for the apex domain and a `CNAME` for `www`, pointing at Render's infrastructure).
 3. Add those records in your domain registrar's DNS settings.
 4. Wait for DNS to propagate (minutes to an hour) — Render will show the domain as verified and auto-provision a free TLS certificate.
 
-Visit `https://vaishnav.com` — done.
+Visit `https://vaishnavraju.com` — done.
 
 ### Updating the site later
 
@@ -103,7 +103,7 @@ scp .env root@<your VPS IP>:/opt/portfolio/.env
 ```
 
 (Create the directory first: `ssh root@<ip> "mkdir -p /opt/portfolio"`.)
-In `.env` on the server, set `PORT=8080` and `ALLOWED_ORIGINS=https://vaishnav.com`.
+In `.env` on the server, set `PORT=8080` and `ALLOWED_ORIGINS=https://vaishnavraju.com`.
 
 ### 5. Run it as a service (systemd)
 
@@ -145,7 +145,7 @@ sudo apt install -y caddy
 Replace `/etc/caddy/Caddyfile` with:
 
 ```
-vaishnav.com, www.vaishnav.com {
+vaishnavraju.com, www.vaishnavraju.com {
     reverse_proxy localhost:8080
 }
 ```
